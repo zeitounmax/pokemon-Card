@@ -1,7 +1,7 @@
 import React from "react";
 
-function PokemonCard() {
-  const pokemon = pokemonList[1];
+function PokemonCard(props) {
+  const pokemon = props.pokemon;
   let imageElement = null;
   if (pokemon.imgSrc) {
     imageElement = <img src={pokemon.imgSrc} alt={pokemon.name} />;
