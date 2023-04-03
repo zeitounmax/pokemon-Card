@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
+import NavBar from "./components/NavBar";
 
 const pokemonList = [
   {
@@ -47,11 +48,13 @@ function App() {
 
   return (
     <div>
+      <NavBar
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        showPrev={pokemonIndex > 0}
+        showNext={pokemonIndex < pokemonList.length - 1}
+      />
       <PokemonCard pokemon={pokemon} />
-      {pokemonIndex > 0 && <button onClick={handlePrev}>Précédent</button>}
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button onClick={handleNext}>Suivant</button>
-      )}
     </div>
   );
 }
