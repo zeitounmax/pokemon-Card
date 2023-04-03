@@ -30,6 +30,7 @@ const pokemonList = [
 ];
 
 function App() {
+  alert("hello pokemon trainer :)"); 
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
   const handleNext = () => {
@@ -59,4 +60,11 @@ function App() {
   );
 }
 
+
 export default App;
+
+
+
+
+
+
